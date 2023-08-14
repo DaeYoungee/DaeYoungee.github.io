@@ -125,17 +125,32 @@ blockquote {
 
 /* links */
 
-a {
+// a {
+//   &:focus {
+//     @extend %tab-focus;
+//   }
+
+//   &:visited {
+//     color: #000;
+//   }
+
+//   &:hover {
+//     color: #777799;
+//     outline: 0;
+//   }
+// }
+
+a:not(.pagination--pager) {
   &:focus {
     @extend %tab-focus;
   }
 
   &:visited {
-    color: $link-color-visited;
+    color: #000;
   }
 
   &:hover {
-    color: $link-color-hover;
+    color: #777799;
     outline: 0;
   }
 }
@@ -143,7 +158,19 @@ a {
 /* buttons */
 
 button:focus {
-  @extend %tab-focus;
+  // @extend %tab-focus;
+  &:focus {
+    @extend %tab-focus;
+  }
+
+  &:visited {
+    color: #619eff;
+  }
+
+  &:hover {
+    color: #597dc6;
+    outline: 0;
+  }
 }
 
 /* code */

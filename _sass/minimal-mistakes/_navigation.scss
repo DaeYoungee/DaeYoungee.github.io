@@ -128,12 +128,13 @@
     font-weight: bold;
     text-align: center;
     text-decoration: none;
-    color: $muted-text-color;
-    border: 1px solid mix(#000, $border-color, 25%);
+    color: #fff;
+    background-color: #619eff;
+    border: 1px solid mix(#fff, $border-color, 25%);
     border-radius: $border-radius;
 
     &:hover {
-      @include yiq-contrasted($muted-text-color);
+      @include yiq-contrasted(#597dc6);
     }
 
     &:first-child {
@@ -515,7 +516,7 @@
   .nav__title {
     color: #fff;
     font-size: $type-size-6;
-    background: $primary-color;
+    background: #619eff;
     border-top-left-radius: $border-radius;
     border-top-right-radius: $border-radius;
   }
@@ -568,6 +569,6 @@
   }
 
   li ul li ul li ul li ul li ul > li a {
-    padding-left: 3.25rem
+    padding-left: 3.25rem;
   }
 }
