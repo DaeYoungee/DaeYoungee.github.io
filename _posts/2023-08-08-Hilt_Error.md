@@ -1,5 +1,5 @@
 ---
-title: "Hilt와 Compose 버전 호환성"
+title: "[Kotlin] Hilt와 Compose 버전 호환성"
 excerpt: "Hilt, Kotlin, Compose 버전"
 
 writer: DaeYoungEE

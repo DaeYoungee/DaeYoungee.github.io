@@ -1,5 +1,5 @@
 ---
-title: "SharedPreference"
+title: "[Kotlin] SharedPreference"
 excerpt: "SharedPreference에 Hilt 적용해보기"
 
 writer: DaeYoungEE
