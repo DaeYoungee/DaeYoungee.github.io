@@ -16,6 +16,14 @@ last_modified_at: 2022-09-10
 published: true
 ---
 
+**Manifest 권한 설정**
+
+```kotlin
+<uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+```
+
+❗️ 주의: 만약 알림이 울리지 않으면 앱의 설정으로 들어가서 알림기능이 꺼져있는지 확인해보길 바란다.
+
 ## 알림 만드는 과정
 
 1. NotificationManager 객체 생성
@@ -78,7 +86,7 @@ if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
         } else {
             builder = NotificationCompat.Builder(this)
         }
-        builder.setAutoCancel(true)
+        builder.setAutoCancel(true)  // 클릭 시 알림 제거
         builder.setSmallIcon(android.R.drawable.ic_notification_overlay)  //스몰 아이콘
         builder.setWhen(System.currentTimeMillis()) //알림 시각
         builder.setContentTitle("Notification Title")    //제목
@@ -111,3 +119,10 @@ FLAG_CANCEL_CURRENT : 이전 생성되어 있는 것을 생성하기 전에 취�
 - FLAG_UPDATE_CURRENT : 생성된 Intent 이미 존재하면 이를 유지하되 추가 데이터를 새 Intent에 있는 것으로 대체하는 FLAG
 
 PendingIntent 생성할 때 flag로 FLAG_IMMUTABLE 또는 FLAG_MUTABLE를 사용하지 않으면 **Targeting S+ (version 31 and above) requires that one of FLAG_IMMUTABLE or FLAG_MUTABLE be specified when creating a PendingIntent.**와 같은 오류가 뜬다.
+
+**Reference**  
+https://velog.io/@ywown/%EB%8B%A4%EC%9D%B4%EC%96%BC%EB%A1%9C%EA%B7%B8%EC%99%80-%EC%95%8C%EB%A6%BC-%EC%9D%B4%EC%9A%A9%ED%95%98%EA%B8%B0-a8d4k4fn#5-%EC%95%8C%EB%A6%BC-%EB%9D%84%EC%9A%B0%EA%B8%B0  
+https://velog.io/@tjeong/Android-%EC%95%8C%EB%A6%BC-%EC%9D%B4%EB%B2%A4%ED%8A%B8-%EC%B2%98%EB%A6%AC
+https://velog.io/@tjeong/Android-%EC%95%8C%EB%A6%BC-%EB%9D%84%EC%9A%B0%EA%B8%B0  
+[PendingIntent flag 오류](https://velog.io/@heetaeheo/Targeting-S-version-31-and-above-requires-that-one-of-FLAGIMMUTABLE-or-FLAGMUTABLE-be-specified-when-creating-a-PendingIntent)
+[PendingIntent](https://zibro.tistory.com/2)
