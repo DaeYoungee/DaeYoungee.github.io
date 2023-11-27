@@ -4,7 +4,7 @@ excerpt: "안드로이드 디자인 패턴, MVVM 패턴에 대해 알아보자"
 
 writer: DaeYoungEE
 categories:
-  - kotlin
+  - Kotlin
 tags:
   - [Kotlin]
 sidebar:

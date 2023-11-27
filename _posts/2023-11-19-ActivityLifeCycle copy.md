@@ -4,7 +4,7 @@ excerpt: "안드로이드 액티비티 라이프사이클에 대해 알아보자
 
 writer: DaeYoungEE
 categories:
-  - kotlin
+  - Kotlin
 tags:
   - [Kotlin]
 sidebar:

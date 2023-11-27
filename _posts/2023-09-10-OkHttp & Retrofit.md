@@ -4,7 +4,7 @@ excerpt: "OkHttp와 Retrofit2의 관계를 알아보자"
 
 writer: DaeYoungEE
 categories:
-  - Design Pattern
+  - Kotlin
 tags:
   - [Kotlin, Java, OkHttp]
 sidebar:

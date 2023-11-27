@@ -4,7 +4,7 @@ excerpt: "Hilt, Kotlin, Compose 버전"
 
 writer: DaeYoungEE
 categories:
-  - kotlin
+  - Kotlin
 tags:
   - [Kotlin, Compose]
 sidebar:

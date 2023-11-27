@@ -4,7 +4,7 @@ excerpt: "SharedPreference에 Hilt 적용해보기"
 
 writer: DaeYoungEE
 categories:
-  - kotlin
+  - Kotlin
 tags:
   - [Kotlin, Compose, Hilt, SharedPreference]
 sidebar:

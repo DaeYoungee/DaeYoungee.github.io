@@ -4,7 +4,7 @@ excerpt: "코틀린 제트팩 컴포즈에서 DataStore가 어떻게 사용되�
 
 writer: DaeYoungEE
 categories:
-  - kotlin
+  - Kotlin
 tags:
   - [Kotlin]
 sidebar:
@@ -15,6 +15,45 @@ last_modified_at: 2022-11-27
 
 published: true
 ---
+
+## SharedPreferences
+
+- Key, Value 형태로 이용
+- String, Int, Float, Boolean과 같은 원시형 데이터들을 저장하고 검색할 수 있다.
+- 내부적으로는 XML 파일로 저장된다.  
+  <br>
+
+### SharedPreferences의 한계점
+
+- UI 스레드에서 호출할 수 있도록 API가 설계되었지만, UI 스레드를 블로킹해 ANR을 발생시킬 수 있다.
+- 런타임에 예외가 생기면 에러가 발생해 앱이 강제 종료될 수 있다.
+- Strong Consistency(강한 일관성)이 보장되지 않아 다중 스레드 환경에서 안전하지 않다.
+  > Strong Consistency(강한 일관성)이란 다중 스레드 환경에서 안전하게 데이터를 입력하거나 조회하게 하는 것이다. 이를 통해 다중 스레드 환경에서 안전하게 데이터를 입력, 조회할 수 있도록 한다. 이는 동시성 프로그래밍에서 중요한 요소이다.
+- Type Safey가 보장되지 않아 어떤 데이터가 저장되고 추출되는지 일일히 데이터로 Type Convertind(형 변환) 해주어야 한다.
+
+📌 공식문서에서 만약 SharedPrefereces를 사용하고 있다면 DataStore로 이전할 것을 권고하고 있다.
+
+## DataStore
+
+DataStore는 Coroutine을 사용해 동시성 프로그래밍에 최적화된 API를 제공한다.
+
+- 경량 스레드 모델을 구현하는 Coroutine을 사용해 내부를 구현함으로써 더욱 효율적으로 데이터를 저장할 수 있도록 한다.
+- 기존 UI 스레드에서 호출되어 ANR을 발생시킬 수 있었던 SharedPreferences와 다르다.
+- 내부에서 Coroutine의 IO Dispathcer를 사용해 IO를 담당하는 스레드 풀에서 데이터를 조작하도록 강제했다.
+- 또한 Flow를 사용해 데이터를 추출할 수 있도록 만들어 데이터의 입출력을 모두 Coroutine에서 사용할 수 있도록 하였다.  
+  <br>
+
+Strong Consistency(강한 일관성)을 보장하는 Transaction API를 제공한다.
+<br>  
+DataStore는 Type Safety를 지원한다.
+
+- Type Safety란 데이터가 타입을 기준으로 입력되고 출력될 수 있는지에 대한 것이다.
+- 즉 “예측불가능한 결과를 내지 않는다”라는 것을 뜻한다.
+- 하지만 Preference DataStore, Proto DataStore 중 ProtoDataStore 만 Type Safety를 보장한다.
+
+<div align="center">
+  <img alt="SharedPreferences, DataStore 차이" src="https://github.com/DaeYoungee/DaeYoungee.github.io/assets/121485300/4f44a2bf-c45e-4106-b2f3-46ae3d6d0886">   
+</div>
 
 ## DataStore 구현
 
