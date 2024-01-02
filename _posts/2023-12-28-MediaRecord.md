@@ -11,7 +11,7 @@ sidebar:
   nav: "counts"
 
 data: 2023-12-28
-last_modified_at: 2022-12-28
+last_modified_at: 2023-12-28
 
 published: true
 ---
@@ -227,8 +227,9 @@ fun stopRecording() {
 }
 ```
 
-<설명>  
-`File` 객체를 만들고 생성자 매개변수로 오디오 파일이 저장된 경로를 넣는다. `File` 객체의 `asRequestBody()` 메서드를 통해 RequestBody로 타입 캐스팅을 하고 `MultipartBody.Part.createFormData()`를 통해서 Multipart 타입으로 바꿔준다.
+- 설명  
+  `File` 객체를 만들고 생성자 매개변수로 오디오 파일이 저장된 경로를 넣는다. `File` 객체의 `asRequestBody()` 메서드를 통해 RequestBody로 타입 캐스팅을 하고 `MultipartBody.Part.createFormData()`를 통해서 Multipart 타입으로 바꿔준다.
+  <br>
 
 - Log 출력 결과
     <div align="center">
@@ -238,9 +239,9 @@ fun stopRecording() {
 
 ### Reference
 
-https://stickode.tistory.com/65
-https://developer.android.com/guide/topics/media/mediarecorder?hl=ko  
-https://yuar.tistory.com/entry/%EC%9D%8C%EC%84%B1-%ED%8C%8C%EC%9D%BC-%EC%84%9C%EB%B2%84-%EC%97%85%EB%A1%9C%EB%93%9C%ED%95%98%EA%B8%B0
+[마이크 녹음(record) 기능 구현하기](https://stickode.tistory.com/65)  
+[안드로이드 공식 홈페이지](https://developer.android.com/guide/topics/media/mediarecorder?hl=ko)  
+[음성 파일 서버 업로드](https://yuar.tistory.com/entry/%EC%9D%8C%EC%84%B1-%ED%8C%8C%EC%9D%BC-%EC%84%9C%EB%B2%84-%EC%97%85%EB%A1%9C%EB%93%9C%ED%95%98%EA%B8%B0)
 
 ### 데모 영상
 
