@@ -63,10 +63,9 @@ OkHttp가 제공하는 기능중 Interceptor와 실시간의 통신이 필요한
 
 보통 Header에 Auth를 추가하기 위해 많이 사용한다.
 
-client로 쓰는 OkHttp의 사용법
-https://devgeek.tistory.com/56  
-https://devgeek.tistory.com/57  
-https://velog.io/@heetaeheo/okhttp-Retrofit
+client로 쓰는 OkHttp의 사용법  
+[1](https://devgeek.tistory.com/56)  
+[2](https://devgeek.tistory.com/57)  
+[3](https://velog.io/@heetaeheo/okhttp-)
 
-OkHttp와 Retorfit의 장단점  
-https://velog.io/@jeongminji4490/Android-OkHttp-Retrofit
+[OkHttp와 Retorfit의 장단점](https://velog.io/@jeongminji4490/Android-OkHttp-Retrofit)
