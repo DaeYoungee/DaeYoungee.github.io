@@ -32,6 +32,12 @@ Icon(
 )
 ```
 
+## 아이콘 종류
+
+- Icons.Default(Icons.Filled)
+- Icons.Outlined  
+  정도만 알아도 충분할 것 같다.
+
 <div align="center">
   <img alt="구글 머티리얼 아이콘 종류" src="https://github.com/DaeYoungee/Sign-up_Firebase/assets/121485300/7cfd9078-4bb5-4643-b61e-11b7739c7607">   
 </div>
