@@ -191,6 +191,9 @@ class RecordViewModel @Inject constructor(
     <img alt="로그에 찍힌 저장 경로" src="https://github.com/postboxat18/GoogleCloudBucket/assets/121485300/2041186d-d70d-40dd-9afc-29c245e780d9">   
     </div>   
     <br>
+    
+    storage -> emulated -> 0 -> Android -> data 까지 들어가면
+    이후에는 핸드폰에 깔려있는 여러 어플들의 패키지명이 존재한다.
 
 - 파일 이름
     <div align="center">
