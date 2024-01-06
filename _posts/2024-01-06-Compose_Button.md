@@ -20,7 +20,7 @@ published: true
 
 `Modifier.padding()` 했을 때 패딩 값에는 변화가 없다. `PaddingValues()`을 이용해야 됨을 기억하자.
 
-- **Modifier.padding()**
+- **Modifier.padding()** --> 사용 ❌
   ```kotlin
   Button(
       onClick = { /*TODO*/ },
@@ -61,7 +61,7 @@ Button 컴포저블에 배경색을 입힐 때, `Modifier.background()`을 사�
 
 - **ButtonDefaults.buttonColors()**
 
-  ```koltin
+  ```kotlin
   Button(
       onClick = { /*TODO*/ },
       colors = ButtonDefaults.buttonColors(
@@ -73,9 +73,9 @@ Button 컴포저블에 배경색을 입힐 때, `Modifier.background()`을 사�
   }
   ```
 
-- **Modifier.background()**
+- **Modifier.background()** --> 사용 ❌
 
-  ```koltin
+  ```kotlin
   Button(
       onClick = { /*TODO*/ },
       modifier = Modifier.background(color = Color.LightGray),
@@ -112,7 +112,7 @@ Button 컴포저블에 배경색을 입힐 때, `Modifier.background()`을 사�
   </div>
 - 실제 코드
 
-  ```koltin
+  ```kotlin
   Button(
       onClick = { /*TODO*/ },
       modifier = Modifier
@@ -168,13 +168,14 @@ Button 컴포저블에 배경색을 입힐 때, `Modifier.background()`을 사�
 
   <br>
 
+- 결과
   <div align="center">
     <img alt="Compose Button Padding 비교" src="https://github.com/DaeYoungee/Compose_study/assets/121485300/98602adc-0dac-4e20-add7-225fda9e1679">   
   </div>
 
 ## References
 
-[Compose Button 색상](https://kotlinworld.com/243?category=974080)
+[Compose Button 색상](https://kotlinworld.com/243?category=974080)  
 [Compose Material3 Version 확인, 공식 홈페이지](https://developer.android.com/jetpack/androidx/releases/compose-material3?hl=ko)  
-[Compose Material3 사용방법, 공식 홈페이지](https://developer.android.com/jetpack/compose/designsystems/material3?hl=ko)
+[Compose Material3 사용방법, 공식 홈페이지](https://developer.android.com/jetpack/compose/designsystems/material3?hl=ko)  
 [ElevatedButton 컴포저블](https://semicolonspace.com/jetpack-compose-material3-elevatedbutton/)
