@@ -65,8 +65,7 @@ var currentSnackbarData by mutableStateOf<SnackbarData?>(null)
 
 **snackbar** 매개변수의 타입은 컴포저블 함수 타입이고 컴포저블 함수의 매개변수로는 **SnackbarData**가 필요하다.  
 <span style="color:rgb(77,171,254)"> **SnackbarData** </span>을 쉽게 설명하면 스낵바의 우측에 표시되는 컴포넌트이다. 아래의 사진속에서는 "완료"부분이 된다.
-
-<div>
+<br>
 
 ## Snackbar
 
@@ -75,13 +74,13 @@ var currentSnackbarData by mutableStateOf<SnackbarData?>(null)
 <div align="center">
 <img alt="Snackbar" src="https://github.com/DaeYoungee/Compose_study/assets/121485300/4a8dbf75-fb79-4742-ab64-916cf29228eb">   
 </div>
-
-`Snackbar()` 컴포저블의 매개변수에서 **content**는 좌측에 나타나는 컴포넌트, **action**은 우측에 나타나는 컴포너트이다. 아래의 그림으로 설명하면 **content**는 "snackBar show!!" 이고 **action**은 "확인"이다.  
-**action**의 데이터와 이벤트 처리는 **SnackbarData**을 통해 구현되는 것을 볼 수 있다. 그래서 아래의 <span style="color:rgb(77,171,254)"> **Custom한 snackbar** </span>에서 `onClick = {it.performAction()}` 을 이용해 **action**의 이벤트를 처리한 것이다.<br><br>
-
+<br>
 <div align="center">
 <img alt="Snackbar" src="https://github.com/DaeYoungee/Compose_study/assets/121485300/8ce56dcc-5c34-408b-a374-c9982dc1cae8">   
 </div>
+<br>
+`Snackbar()` 컴포저블의 매개변수에서 **content**는 좌측에 나타나는 컴포넌트, **action**은 우측에 나타나는 컴포너트이다. 아래의 그림으로 설명하면 **content**는 "snackBar show!!" 이고 **action**은 "확인"이다.  
+**action**의 데이터와 이벤트 처리는 **SnackbarData**을 통해 구현되는 것을 볼 수 있다. 그래서 아래의 <span style="color:rgb(77,171,254)"> **Custom한 snackbar** </span>에서 `onClick = {it.performAction()}` 을 이용해 **action**의 이벤트를 처리한 것이다.
 <br>
 
 ## snackbar의 custom 유무
@@ -131,7 +130,7 @@ snackbar의 custom 유무를 사진으로 한눈에 알아보자.
 
   여기서 `it.performAction()`에 대해 많이 궁금할 수 있다. 여기서 **it**은 `SnackbarData` 객체이다. `SnackbarData.performAction()` 메서드를 통해 클릭 이벤트를 구현할 수 있다. 아래의 코드에서 살펴보자.
 
-- **Default snackbar**
+- **Default snackbar** -> Snackbar()컴포저블 ❌
 
   ```kotlin
   @Composable
@@ -146,6 +145,7 @@ snackbar의 custom 유무를 사진으로 한눈에 알아보자.
   <div align="center">
   <img alt="snackbarHostState" src="https://github.com/DaeYoungee/Compose_study/assets/121485300/a63ea7af-c0f5-4a45-8847-f8289b34903f">   
   </div>
+  <br>
 
   `SnackbarHost()` 컴포저블의 후행 람다슬롯을 비웠을 경우이다.
 
