@@ -202,3 +202,4 @@ private fun formatTime1(timeMillis: Long): String {
 [milliseconds -> LocalDateTime](https://heeeju4lov.tistory.com/36)  
 [LocalDateTime -> 원하는 포멧](https://www.baeldung.com/java-convert-epoch-localdate)  
 [Compose를 활용하여 스탑워치 데스크탑앱 만들기](https://velog.io/@blucky8649/%EC%BD%94%ED%8B%80%EB%A6%B0-Compose%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%98%EC%97%AC-%EB%8D%B0%EC%8A%A4%ED%81%AC%ED%83%91-%EC%8A%A4%ED%83%91%EC%9B%8C%EC%B9%98-%EB%A7%8C%EB%93%A4%EA%B8%B0)
+[TimeUnit 이용](https://www.programiz.com/kotlin-programming/examples/milliseconds-minutes-seconds)
