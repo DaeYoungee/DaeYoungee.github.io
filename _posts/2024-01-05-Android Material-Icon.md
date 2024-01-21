@@ -18,13 +18,13 @@ published: true
 
 ## 라이브러리 설치
 
-```koltin
+```kotlin
 implementation "androidx.compose.material:material-icons-extended:$compose_ui_version"
 ```
 
 ## 아이콘 사용사례
 
-```koltin
+```kotlin
 Icon(
     imageVector = Icons.Default.VolumeUp,
     contentDescription = "Water Sound Check",
