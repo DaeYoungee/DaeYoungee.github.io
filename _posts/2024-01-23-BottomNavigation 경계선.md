@@ -82,3 +82,7 @@ NavigationBar(
     contentColor = Color.Black,
 )
 ```
+
+## References
+
+[kotlin jetpack compose border](https://medium.com/@banmarkovic/jetpack-compose-bottom-border-8f1662c2aa84)
