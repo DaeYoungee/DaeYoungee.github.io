@@ -582,3 +582,9 @@ body {
     }
   }
 }
+
+#area {
+  position: relative; /* absolute는 부모가 relative일 때 부모를 따라간다. */
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 비율 */
+}
