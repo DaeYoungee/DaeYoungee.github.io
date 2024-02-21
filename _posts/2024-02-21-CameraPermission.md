@@ -18,7 +18,7 @@ published: true
 
 JetPack Compose에서 Permission을 요청하기 위해서는 [**Google의 accompanist**](https://github.com/google/accompanist/blob/main/sample/src/main/java/com/google/accompanist/sample/permissions/RequestPermissionSample.kt) 모듈을 설치해야한다.
 
-### build.Gradle.kts
+## build.Gradle.kts
 
 ```kotlin
     implementation ("com.google.accompanist:accompanist-permissions:0.34.0")
