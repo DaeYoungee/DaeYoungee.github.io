@@ -79,6 +79,14 @@ fun Context.createImageFile(): File {
 ```kotlin
 @Composable
 fun UseCamera() {
+    DisposableEffect(Unit) {
+        onDispose {
+            val path = "/storage/emulated/0/Android/data/${BuildConfig.APPLICATION_ID}/cache/"
+            val cashFile = File(path)
+            val result = cashFile.allDelete()
+        }
+    }
+
     val context = LocalContext.current
     val file = context.createImageFile()
     val uri = FileProvider.getUriForFile(
@@ -115,7 +123,36 @@ fun UseCamera() {
 }
 ```
 
-**BuildConfig.APPLICATION_ID**은 반드시 현재 사용중인 프로젝트의 패키지명으로 와야한다.
+**BuildConfig.APPLICATION_ID**은 반드시 현재 사용중인 프로젝트의 패키지명으로 와야한다.  
+카메라를 통해 가져온 이미지는 "/storage/emulated/0/Android/data/${BuildConfig.APPLICATION_ID}/cache/" 경로에 저장된다. 사용자가 지우지 않으면 영구적으로 저장된다. 불필요한 리소스이므로 `DisposableEffect{}`를 통해 제거해줘야 한다.
+
+### File.allDelete()
+
+디렉토리 또는 파일을 삭제하고 싶으면 `file.delete()`를 사용하면 된다. 그러나 디렉토리 내부에 데이터가 있으면 삭제가 되지않는다.  
+`File.allDelete()` 확장함수를 만들어 디렉토리 내부의 데이터를 제거해보자.
+
+```kotlin
+fun File.allDelete():Boolean? {
+    var returnData = false
+    val result = runCatching {     if (this.exists()) {
+        val files = this.listFiles()
+        if (files != null && files.size >0) {
+            files.forEachIndexed { index, file ->
+                returnData = file.delete()
+            }
+            return returnData
+        } else {
+            return false
+        }
+    } else {
+        return false
+    } }.onSuccess { return true }.onFailure { error ->
+        Log.d(TAG, "error: ${error.message}")
+        return false }
+
+    return result.getOrNull()
+}
+```
 
 ### CameraButton
 
@@ -209,5 +246,5 @@ XML 파일에는 루트로 `<paths>` 요소가 있어야한다. `<paths>` 요소
 
 ## Reference
 
-[medium.com](https://medium.com/@dheerubhadoria/capturing-images-from-camera-in-android-with-jetpack-compose-a-step-by-step-guide-64cd7f52e5de)
+[medium.com](https://medium.com/@dheerubhadoria/capturing-images-from-camera-in-android-with-jetpack-compose-a-step-by-step-guide-64cd7f52e5de)  
 [Android FileProvider](https://eunplay.tistory.com/81)
