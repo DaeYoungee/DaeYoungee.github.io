@@ -247,4 +247,5 @@ XML 파일에는 루트로 `<paths>` 요소가 있어야한다. `<paths>` 요소
 ## Reference
 
 [medium.com](https://medium.com/@dheerubhadoria/capturing-images-from-camera-in-android-with-jetpack-compose-a-step-by-step-guide-64cd7f52e5de)  
-[Android FileProvider](https://eunplay.tistory.com/81)
+[Android FileProvider](https://eunplay.tistory.com/81)  
+[File delete 레퍼런스](https://kkh0977.tistory.com/4658)
