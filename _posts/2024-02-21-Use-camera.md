@@ -209,7 +209,7 @@ AndroidManifest.xml에서 FileProvider에 대해 정의하려면 아래의 속�
 name에는 FileProvider가 있는 경로를 설정한다. 여기서는 "androidx.core.content.FileProvider"로 설정했다.
 
 <span style="font-size : 11pt"> **android:authorities** </span>  
-적어도 하나의 고유 권한을 반드시 정의해야한다. Android 시스템은 모든 제공자의 목록을 유지하며 권한별로 이를 구분한다. **권한은 애플리케이션 ID가 Android 애플리케이션을 정의하는 거서럼 FileProvider를 정의한다.**  
+적어도 하나의 고유 권한을 반드시 정의해야한다. Android 시스템은 모든 제공자의 목록을 유지하며 권한별로 이를 구분한다. **권한은 애플리케이션 ID가 Android 애플리케이션을 정의하는 것처럼 FileProvider를 정의한다.**  
 필자는 **현재 프로젝트의 패키명 + .provider**를 사용했다.  
 ex) "com.example.planet.provider"
 
