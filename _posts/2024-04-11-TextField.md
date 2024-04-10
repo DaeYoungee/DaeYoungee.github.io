@@ -35,7 +35,9 @@ Pigma에 설계된 UI대로 TextField의 custom하려고 구글링을 했다. �
 ## BasicTextField
 
 TextField를 커스텀하기 위해서는 BasicTextField를 사용해야 한다.  
-필자는 아래의 사진과 같이 카카오톡에서 닉네임을 변경될 떄 보여지는 TextField를 만들고 싶었다.
+(원하는 디자인뿐만 아니라 TextField의 원하는 height를 설정하기 위해서는 BasicTextField를 사용해야 한다.) -> [참고 레퍼런스](https://stackoverflow.com/questions/67681416/jetpack-compose-decrease-height-of-textfield)
+
+필자는 아래의 사진과 같이 카카오톡에서 닉네임을 변경될 때 보여지는 TextField를 만들고 싶었다.
 ![image](https://github.com/DaeYoungee/Compose_study/assets/121485300/648da2a5-eba8-4250-86a1-e65c01c6230b)
 
 <br>
@@ -131,7 +133,7 @@ BasicTextField(
 )
 ```
 
-## TextField focus 주기
+## TextField focus
 
 처음 영상을 봤을 때 연필 icon을 클릭했을 때 TextField에 자동으로 focus 되면서 softKeyBoard가 올라왔다. 그에 관련된 코드를 지금부터 살펴보겠다.  
 TextField에 focus를 주기 위해서는 `FocusRequester()` 객체가 필요하다.  
@@ -207,7 +209,25 @@ BasicTextField(
 )
 ```
 
+## 기타(추가로 알아두면 좋음)
+
+- TextField의 underLine 제거  
+  TextField의 Indicator의 색상을 Color.Transparent로 바꿔주면 된다.
+
+  ```kotlin
+  TextField(
+      ...
+      colors = TextFieldDefaults.textFieldColors(
+          focusedIndicatorColor = Color.Transparent,
+          unfocusedIndicatorColor = Color.Transparent,
+          textColor = Black
+      ),
+  )
+  ```
+
 ## Reference
 
 [TextField 가시성 처리](https://dev.to/tkuenneth/keyboard-handling-in-jetpack-compose-2593)  
-[TextField cursor position 설정](https://stackoverflow.com/questions/70908515/how-to-change-text-field-cursor-position-in-jetpack-compose)
+[TextField cursor position 설정](https://stackoverflow.com/questions/70908515/how-to-change-text-field-cursor-position-in-jetpack-compose)  
+[TextField의 underLine 제거](https://velog.io/@victorywoo/Compose-%EC%82%AC%EC%9A%A9%EB%B2%95-TextField-indicator)
+[TextField의 height 변경](https://stackoverflow.com/questions/67681416/jetpack-compose-decrease-height-of-textfield)
