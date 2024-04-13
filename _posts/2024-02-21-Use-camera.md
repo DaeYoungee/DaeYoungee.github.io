@@ -54,7 +54,7 @@ published: true
 ```
 
 FileProvider를 사용하기 위해 `<provider>`를 설정한다. 여기서 주의해야할 점은 authorities 이다.
-authorities은 **현재 프로젝트의 패키명 + .provider**로 설정해야한다.
+authorities은 **현재 프로젝트의 패키지명 + .provider**로 설정해야한다.
 
 ## Context.createImageFile()
 
