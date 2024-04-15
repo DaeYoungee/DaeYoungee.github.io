@@ -25,7 +25,7 @@ Pigma에 설계된 UI대로 TextField의 custom하려고 구글링을 했다. �
 1. custom을 위한 BasicTextField
 2. 현재 글자 수 업데이트
 3. focus된 TextField
-4. focus가 되면서 올라가는 TextField
+4. 키보드가 올라가면서 TextField에 focus가 될 수 있도록 자동 scroll하는 방법.
 5. focus된 TextField 이 후, cursor가 text의 끝을 가리키도록 할 수 있게 TextFieldValue 사용
 
    <br>
@@ -182,6 +182,10 @@ TextField에 focus가 되면서 softKeyboard가 올라오고 softKeyboard가 Tex
 ...
 android:windowSoftInputMode="adjustResize" />
 ```
+
+<br>
+
+<span style="font-size:15pt;">**참고로 manifest.xml 설정뿐만 아니라 Column()에 scrollState를 줘야함을 잊지 말자!**</span> -> [링크](https://blog.canopas.com/keyboard-handling-in-jetpack-compose-all-you-need-to-know-3e6fddd30d9a)
 
 ## TextFieldValue 사용
 
