@@ -70,7 +70,8 @@ Map은 <key,value>로 객체를 관리하는 컬렉션이다. 특징으로는 �
   시간 복잡도: O(1)
 
 - find(탐색)  
-  시간 복잡도: O(1)
+  시간 복잡도: O(1)  
+  key로 데이터를 검색했을 때 시간복잡도가 O(1)이지만, value로 데이터를 검색했을 경우 시간복잡도가 O(n)이다.
 
 - Insertion/Deletion(삽입/삭제)  
   시간 복잡도: O(1)
@@ -78,4 +79,5 @@ Map은 <key,value>로 객체를 관리하는 컬렉션이다. 특징으로는 �
 ## Reference
 
 [Array와 List의 차이(시간복잡도 포함)](https://hyeinisfree.tistory.com/64)  
-[List, ArrayList, Set, Map, Stack, Queue 자료구조 시간복잡도](https://bb-library.tistory.com/144)
+[List, ArrayList, Set, Map, Stack, Queue 자료구조 시간복잡도](https://bb-library.tistory.com/144)  
+[TreeMap, LinkedHashMap, HashMap](https://velog.io/@suev72/Kotlin-Map%EC%9D%98-%EC%A2%85%EB%A5%98TreeMap-LinkedHashMap-HashMap)
